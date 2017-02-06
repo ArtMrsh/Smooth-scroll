@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Smooth scroll</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+
+		<div class="nav">
+			<a href="#" onclick="initScroll('first'); return false;">Go to first paragraph</a>
+			<a href="#" onclick="initScroll('second'); return false;">Go to second paragraph</a>
+			<a href="#" onclick="initScroll('third'); return false;">Go to third paragraph</a>
+			<a href="#" onclick="initScroll('fourth'); return false;">Go to fourth paragraph</a>
+			<a href="#" onclick="initScroll('fifth'); return false;">Go to fifth paragraph</a>
+		</div>
+		<button class="top" onclick="toTop()">To Top</button>
+
+		<div class="para" id="first">First Paragraph</div>
+		<div class="para" id="second">Second Paragraph</div>
+		<div class="para" id="third">Third Paragraph</div>
+		<div class="para" id="fourth">Fourth Paragraph</div>
+		<div class="para" id="fifth">Fifth Paragraph</div>
+	</div>
+	<script src='js/script.js'></script>
+</body>
+</html>

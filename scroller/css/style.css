@@ -1,0 +1,65 @@
+/*GLOBAL*/
+body {
+	margin: 0;
+}
+/*NAVIGATION STYLES*/
+.nav {
+	text-align: center;
+	margin: 10px 0;
+}
+.nav a {
+	padding: 10px 15px;
+	background-color: #1AE8B8;
+	text-transform: uppercase;
+	color: #000;
+	text-decoration: none;
+	border-radius: 5px;
+	display: inline-block;
+}
+.nav a:hover {
+	background-color: #13C299;
+}
+/*PARAGRAPH STYLES*/
+.para {
+	height: 900px;
+	color: #fff;
+	font-size: 25px;
+	text-transform: uppercase;
+	padding: 20px;
+}
+#first {
+	background-color: #6D8DD1;	
+}
+#second {
+	background-color: #D16DBF;
+}
+#third {
+	background-color: #D1B16D;
+}
+#fourth {
+	background-color: #6DD17F;
+}
+#fifth {
+	background-color: #EB1A1A;
+}
+/*TOP TOP BUTTON*/
+.top {
+	border: 1px solid #1AE8D8;
+	height: 55px;
+	width: 55px;
+	background-color: #1AE8B8;
+	text-align: center;
+
+	cursor: pointer;
+	border-radius: 5px;
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	text-transform: uppercase;
+}
+.top:hover {
+	background-color: #13C299;
+}
+.top:focus {
+	outline: none;
+}
