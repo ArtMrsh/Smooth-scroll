@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+</head>
+<body>
+<style>
+:root {
+   --spacing: 10px;
+   --base: #ffc600;
+   --blur: 10px;
+}
+img {
+   padding: var(--spacing);
+   background-color: var(--base);
+   filter: blur(var(--blur));
+}
+.h1 {
+   color: var(--base);
+}
+/*Basic styles*/
+   * {
+      margin: 0;
+      padding: 0;
+   }
+   body {
+      background-color: #000066;
+      text-align: center;
+      font-family: sans-serif;
+   }
+   .block {
+      margin-top: 50px;
+   }
+   h1 {
+      color: #fff;
+      font-size: 48px;
+   }
+   label {
+      color: #fff;
+      font-size: 22px;
+      font-weight: lighter;
+      padding-right: 15px;
+   }
+   input {
+      margin: 15px 0;
+      cursor: pointer;
+   }
+   input[type="color"] {
+      width: 100px;
+      height: 30px;
+   }
+   img {
+      height: 400px;
+      width: 600px;
+      margin-top: 20px;
+   }
+</style>
+
+   <div class="block">
+      <h1>Updating css <br>variables with <span class="h1">JS</span></h1>
+      <div class="inputs">
+         <label for="spacing">Spacing:</label>
+         <input type="range" name="spacing" min="0" max="60" value="10" data-sizing="px"><br>
+
+         <label for="blur">Blur:</label>
+         <input type="range" name="blur" min="0" max="25" value="10" data-sizing="px"><br>
+
+         <label for="base">Base Color:</label>
+         <input type="color" value="#ffc600" name="base">
+      </div>
+      <img src="harrypotter975357.jpg" alt="image">
+   </div>
+
+<script>
+   function handleUpdate() {
+      var suffix = this.dataset.sizing || "";
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+   }
+
+
+   var inputs = document.getElementsByTagName("input");
+   for(var i = 0; i < inputs.length; i++) {
+      inputs[i].addEventListener("change", handleUpdate);
+      inputs[i].addEventListener("mousemove", handleUpdate)
+   }
+</script>
+
+</body>
+</html>
